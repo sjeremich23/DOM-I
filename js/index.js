@@ -52,6 +52,18 @@ for (let i = 0; i < navbar.length; i++) {
 	navbar[i].textContent = siteContent["nav"][`nav-item-${[i + 1]}`];
 }
 
+let navTag = document.querySelector("nav");
+let aTag = document.createElement("a");
+aTag.href = "#";
+aTag.innerText = "New Link";
+
+let a2Tag = document.createElement("a");
+a2Tag.href = "#";
+a2Tag.innerText = "New Link";
+
+navTag.prepend(aTag);
+navTag.append(a2Tag);
+
 // Section CTA
 let ctaText = document.querySelector(".cta-text h1");
 ctaText.innerHTML = "DOM <br> IS<br>AWESOME";
